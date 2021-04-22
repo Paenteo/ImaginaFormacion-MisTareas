@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MisTareas.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TextoResaltado">HotPink</Color>
+            <Color x:Key="TextoEntradas">Black</Color>
+            <Color x:Key="TextoVerde">Green</Color>
+            <Color x:Key="TextoAzul">Blue</Color>
+            <Style x:Key="ElementoLista" TargetType="Label">
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource TextoEntradas}" />
+            </Style>
+            </ResourceDictionary>
+    </Application.Resources>
+</Application>

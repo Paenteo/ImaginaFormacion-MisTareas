@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MisTareas.NuevaTarea">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,0">
+            <Label Text="Mi Lista de Tareas" FontAttributes="Bold"
+                   FontSize="Large" VerticalOptions="Start"
+                   HorizontalOptions="Center" TextColor="{StaticResource TextoAzul}"/>
+            <Entry x:Name="nombreTarea" Placeholder="Introduzca la tarea."/>
+            <Button Text="Agregar" Clicked="Button_OnClicked" BackgroundColor="{StaticResource TextoAzul}"/>
+            <Image x:Name="img_calendario" 
+         Source="imagen_calendario_m.png" 
+         VerticalOptions="CenterAndExpand" 
+         HorizontalOptions="Center"/>
+
+            <Image x:Name="img_calendario2" 
+         Source="imagen_calendario_m.png" 
+         VerticalOptions="CenterAndExpand" 
+         HorizontalOptions="Center"/>
+
+            <BoxView x:Name="boxView"
+                 HeightRequest="75"
+                 WidthRequest="75"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Start"
+                 BackgroundColor="Black">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

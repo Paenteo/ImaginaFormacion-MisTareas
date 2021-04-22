@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MisTareas.MainPage">
+    <ContentPage.ToolbarItems>
+        <!-- Evento Activated cuando se pulsa la herramienta de la barra-->
+        <ToolbarItem Text="Añadir tareas + " Activated="ToolbarItem_OnActivated"/>
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="ListaTareasView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ContentView Padding="3">
+                        <Frame OutlineColor="LightGray" Padding="5">
+                            <StackLayout Orientation="Horizontal">
+                                <Button Image="boton_eliminar.png" 
+                                HeightRequest="20" 
+                                WidthRequest="20" 
+                                BackgroundColor="White"
+                                Clicked="ToolbarItem_OnActivated"/>
+                                <Label Text="{Binding Nombre}" Style="{StaticResource ElementoLista}"/>
+                                <Label  Text="Pendiente"
+                                       FontSize="10" 
+                                       VerticalOptions="Center" 
+                                       HorizontalOptions="End" 
+                                       TextColor="{StaticResource TextoResaltado}" />
+
+                                <Switch HorizontalOptions="EndAndExpand" 
+                                        OnColor="{StaticResource TextoResaltado}" />
+                            </StackLayout>
+                        </Frame>
+                    </ContentView>
+
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
